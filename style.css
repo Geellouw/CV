@@ -1,0 +1,168 @@
+/* for print */
+@page {
+    size: A4;
+    margin: 0;
+}
+
+body {
+    font-family: "Calibri", "Sans-Sarif";
+    background-color: rgb(204, 204, 204);
+    /* width: 100%; */
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 36pt;
+    line-height: 44pt;
+    /* letter-spacing: 0.1em; */
+    text-transform: uppercase;
+    /* color: #3D78BC; */
+    margin: 0;
+}
+
+h2 {
+    /* font-weight: 400; */
+    font-size: 16pt;
+    line-height: 20pt;
+    /* text-transform: uppercase; */
+    margin: 0 0 8pt 0;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 9pt;
+    line-height: 11pt;
+    margin: 0 0 10pt 0;
+    font-weight: bold;
+    color: #555555;
+}
+
+p {
+    font-weight: 400;
+    font-size: 11pt;
+    /* font-size: 15px; */
+    /* font-size: round(calc(96/72*11px), 1px); */
+    /* font-size: round(to-zero, 14px, 1px); */
+    line-height: 13pt;
+    margin: 0;
+}
+
+p+p {
+    margin: 10pt 0 0 0;
+}
+
+section {
+    /* display: grid; */
+    /* background-color: rgb(201, 201, 201); */
+    margin-block-end: 1.5rem;
+    /* justify-items: center; */
+    /* padding: 0.5cm; */
+    padding: 36pt;
+    /* width: 50%; */
+    page-break-after: always;
+    break-after: page;
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+}
+
+section {
+    page-break-after: always;
+    break-after: page;
+}
+
+.wide {
+    letter-spacing: 0.1em;
+}
+
+.blue {
+    color: #3D78BC;
+}
+.special {
+    color: #ffffff;
+    background-color: #3D78BC !important;
+}
+
+.upper {
+    text-transform: uppercase;
+}
+
+.m-16 {
+    margin: 0 0 16pt 0;
+}
+
+.card {
+    background: #EEEEEE;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+    padding: 16pt;
+}
+
+.card:hover {
+    background-color: #3d78bc55;
+}
+
+.row {
+    display: flex;
+}
+
+/* .row+.row {
+    margin-bottom: 16pt;
+} */
+
+.row>.col+.col {
+    margin-left: 16pt;
+}
+
+.col {
+    flex-grow: 1;
+    flex-basis: 0;
+}
+
+ul {
+    margin: 3pt 0 0 0;
+    list-style-position: outside;
+    padding-left: 1.5em;
+}
+
+ul>li {
+    font-weight: 400;
+    font-size: 11pt;
+    line-height: 13pt;
+    /* margin: 0; */
+}
+
+ul.space>li{
+
+    margin-bottom: 11.575pt;
+}
+
+/* --------------------------- */
+
+page {
+    background: white;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 0.5cm;
+    box-shadow: 0 0 0.5cm rgba(0, 0, 0, 0.5);
+    /* NEW */
+    overflow: hidden;
+}
+
+page[size="A4"] {
+    width: 21cm;
+    height: 29.7cm;
+    /* width: 8.27in;
+    height: 11.69in; */
+    /* width: 794px;
+    height: 842px; */
+}
+
+@media print {
+
+    body {
+        margin: 0;
+    }
+
+    page {
+        box-shadow: none;
+    }
+}
