@@ -47,6 +47,11 @@ p {
     margin: 0;
 }
 
+a {
+    text-decoration: none;
+     color: black;
+ }
+
 p+p {
     margin: 10pt 0 0 0;
 }
@@ -98,6 +103,8 @@ section {
 
 .card:hover {
     background-color: #3d78bc55;
+    /* transition: 0.2s; */
+    transition: background-color 0.2s ease;
 }
 
 .row {
@@ -135,6 +142,16 @@ ul.space>li{
     margin-bottom: 11.575pt;
 }
 
+
+
+button {
+    margin: 0 auto;
+    padding: 8px 16px;
+    background-color: #3D78BC;
+    border: none;
+    cursor: pointer
+}
+
 /* --------------------------- */
 
 page {
@@ -164,5 +181,9 @@ page[size="A4"] {
 
     page {
         box-shadow: none;
+    }
+
+    #btn {
+        display: none;
     }
 }
